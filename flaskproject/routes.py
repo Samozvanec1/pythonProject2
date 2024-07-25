@@ -1,4 +1,5 @@
-# render_template отвечает за отображение html, redirect отвечает за перенаправление, url_for отвечает за построение ссылки, request отвечает за получение данных
+# render_template отвечает за отображение html, redirect отвечает за перенаправление на другую страницу,
+# url_for отвечает за построение ссылки, request отвечает за получение данных
 from flaskproject import app
 from flask import render_template, redirect, url_for, request
 

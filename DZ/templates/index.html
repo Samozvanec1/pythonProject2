@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета сбора персональных данных (без согласия (не законно))</title>
+</head>
+<body>
+<div class="container">
+    <h1>Анкета создана с целью нарушить законодательство. Но это не имеет значения, возможно...</h1>
+    <form action="http://127.0.0.1:5000" method="POST">
+        <div>
+            <label for="name"> Дай мне имя!</label>
+            <input type="text" id="name" name="name" required> <!-- id привязан к label через for-->
+        </div>
+        <br>
+        <div>
+            <label for="city">ГДЕ ТЫ ЖИВЁШЬ?</label>
+            <input id="city" name="city" required>
+        </div>
+        <br>
+        <div>
+            <label for="hobby">Чем увлекаешься в этой бренной жизни?</label>
+            <textarea id="hobby" name="hobby" rows="2" required></textarea>
+        </div>
+        <br>
+          <div>
+            <label  for="age">Ты совершеннолетний?</label>
+            <input id="age" name="age"  required> </input>
+        </div>
+        <button type="submit">Отправить</button> <!--submit отправляет данные на сервер-->
+    </form>
+</div>
+{% for message in messages%}
+    <div class="container">
+        <h4>{{message.name}}</h4>
+        <p>{{message.city}}</p>
+        <p>{{message.hobby}}</p>
+        <p>{{message.age}}</p>
+    </div>
+
+{% endfor %}
+</body>
+</html>
